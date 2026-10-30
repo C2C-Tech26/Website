@@ -1,6 +1,7 @@
----
 deployment:
   tasks:
     - export DEPLOYPATH=/home1/c2ctecda/sub.c2ctechsolutions.com/
-    - /bin/mkdir -p $DEPLOYPATH
-    - /usr/bin/git archive HEAD | /bin/tar -x -C $DEPLOYPATH
+    - /usr/bin/npm install
+    - /usr/bin/npm run build
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R dist/. $DEPLOYPATH/
