@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/c2ctecda/sub.c2ctechsolutions.com/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /usr/bin/git archive HEAD | /bin/tar -x -C $DEPLOYPATH
