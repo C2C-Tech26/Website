@@ -10,7 +10,7 @@ export function HomeAboutSection() {
   ];
 
   return (
-    <section className="py-[100px] px-6 md:px-8 bg-white">
+    <section className="pt-12 pb-[100px] px-6 md:px-8 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
@@ -51,17 +51,7 @@ export function HomeAboutSection() {
               teams move from fundamentals to corporate execution—with mentorship, live projects, and
               career-focused outcomes.
             </p>
-            <div className="flex flex-wrap gap-3 mb-8">
-              {pillars.map((pillar) => (
-                <span
-                  key={pillar}
-                  className="bg-[var(--yellow)] text-[var(--navy)] px-5 py-2 rounded-full text-sm"
-                  style={{ fontFamily: 'var(--font-body)' }}
-                >
-                  {pillar}
-                </span>
-              ))}
-            </div>
+
             <Link
               to="/about"
               className="inline-flex items-center gap-2 text-[var(--navy)] hover:text-[var(--yellow)] transition-colors font-medium"

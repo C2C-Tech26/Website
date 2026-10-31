@@ -14,8 +14,8 @@ export function HomePage() {
     <>
       <HeroSection />
       <HomeAboutSection />
-      <HomeProgramsSection />
       <ServicesSection />
+      <HomeProgramsSection />
       <InspirationSection />
       <VisionMissionSection />
       <LeadershipSection />

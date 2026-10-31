@@ -1,23 +1,30 @@
 import kurraAnil from '../../assets/images/founders/kurra-anil.jpeg';
 import rajendraPrasad from '../../assets/images/founders/rajendra-prasad-somala.jpeg';
 import saiSatish from '../../assets/images/founders/sai-satish-gandaboina.jpeg';
+import Vidyavathi from '../../assets/images/founders/Vidyavathi.jpeg';
 
 const directors = [
   {
+    name: 'Vidyavathi',
+    title: 'Executive Director',
+    image: Vidyavathi,
+    alt: 'Vidyavathi.B — Director, C2C Tech Solutions',
+  },
+  {
     name: 'Kurra Anil',
-    title: 'Director',
+    title: 'Director of HR',
     image: kurraAnil,
     alt: 'Kurra Anil — Director, C2C Tech Solutions',
   },
   {
     name: 'Rajendra Prasad Somala',
-    title: 'Director',
+    title: 'Director of Projects',
     image: rajendraPrasad,
     alt: 'Rajendra Prasad Somala — Director, C2C Tech Solutions',
   },
   {
     name: 'Sai Satish Gandaboina',
-    title: 'Director',
+    title: 'Director of Operations',
     image: saiSatish,
     alt: 'Sai Satish Gandaboina — Director, C2C Tech Solutions',
   },
@@ -56,7 +63,7 @@ export function LeadershipSection() {
           </div>
         </header>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 md:gap-12 mb-14 md:mb-16 list-none p-0 m-0">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 lg:gap-10 mb-14 md:mb-16 list-none p-0 m-0">
           {directors.map((director) => (
             <li key={director.name} className="flex flex-col items-center text-center">
               <div className="mb-5 -translate-y-4 md:-translate-y-5">
