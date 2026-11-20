@@ -1,0 +1,107 @@
+import kurraAnil from '../../assets/images/founders/kurra-anil.jpeg';
+import rajendraPrasad from '../../assets/images/founders/rajendra-prasad-somala.jpeg';
+import saiSatish from '../../assets/images/founders/sai-satish-gandaboina.jpeg';
+import Vidyavathi from '../../assets/images/founders/Vidyavathi.png';
+
+const directors = [
+  {
+    name: 'Vidyavathi.B',
+    title: 'Executive Director',
+    image: Vidyavathi,
+    alt: 'Vidyavathi.B — Director, C2C Tech Solutions',
+    imgClass: 'scale-[1.3] object-center translate-y-2 md:translate-y-2.5',
+  },
+  {
+    name: 'Kurra Anil',
+    title: 'Director of HR',
+    image: kurraAnil,
+    alt: 'Kurra Anil — Director, C2C Tech Solutions',
+    imgClass: 'scale-[1.3] object-top translate-y-2 md:translate-y-2.5',
+  },
+  {
+    name: 'Rajendra Prasad.S',
+    title: 'Director of Projects',
+    image: rajendraPrasad,
+    alt: 'Rajendra Prasad.S — Director, C2C Tech Solutions',
+    imgClass: 'scale-[1.45] origin-top object-top',
+  },
+  {
+    name: 'Sai Satish.G',
+    title: 'Director of Operations',
+    image: saiSatish,
+    alt: 'Sai Satish.G — Director, C2C Tech Solutions',
+    imgClass: 'scale-[1.3] object-top translate-y-3 md:translate-y-3.5',
+  },
+];
+
+const leadershipStatement =
+  'Our leadership team is driven by a shared vision of innovation, technology advancement, and skill development. With expertise across technology, business operations, training, and strategic growth, the Directors of C2C Tech Solutions Pvt Ltd are committed to building a future-ready organization focused on Artificial Intelligence, Quantum Valley initiatives, product innovation, and industry-driven solutions.';
+
+export function LeadershipSection() {
+  return (
+    <section className="relative overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 bg-white"
+        style={{ height: 'clamp(248px, 32vw, 360px)' }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 bg-[#3a3a3a]"
+        style={{ top: 'clamp(248px, 32vw, 360px)' }}
+        aria-hidden
+      />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8 pt-[100px] pb-[100px]">
+        <header className="text-center mb-10 md:mb-14">
+          <div className="relative inline-block max-w-full">
+            <span
+              className="absolute left-1/2 -translate-x-1/2 bottom-1 md:bottom-1.5 w-full min-w-[100%] h-3 md:h-4 bg-[var(--yellow)]"
+              aria-hidden
+            />
+            <h2
+              style={{ fontFamily: 'var(--font-heading)' }}
+              className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--navy)] uppercase tracking-wide px-2 leading-tight"
+            >
+              Leadership Behind Innovation
+            </h2>
+          </div>
+        </header>
+
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 lg:gap-10 mb-14 md:mb-16 list-none p-0 m-0">
+          {directors.map((director) => (
+            <li key={director.name} className="group flex flex-col items-center text-center">
+              <div className="mb-5 -translate-y-4 md:-translate-y-5">
+                <div className="w-40 h-40 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-[var(--yellow)] shadow-xl bg-white shrink-0 mx-auto">
+                  <img
+                    src={director.image}
+                    alt={director.alt}
+                    className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-135 ${director.imgClass || 'scale-120 object-top'}`}
+                  />
+                </div>
+              </div>
+              <h3
+                style={{ fontFamily: 'var(--font-heading)' }}
+                className="text-xl md:text-2xl text-white mb-1"
+              >
+                {director.name}
+              </h3>
+              <p
+                style={{ fontFamily: 'var(--font-body)' }}
+                className="text-white/80 text-sm md:text-base"
+              >
+                {director.title}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <p
+          style={{ fontFamily: 'var(--font-body)' }}
+          className="text-white/90 text-center text-base md:text-lg leading-relaxed max-w-4xl mx-auto"
+        >
+          {leadershipStatement}
+        </p>
+      </div>
+    </section>
+  );
+}
