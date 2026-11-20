@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, CheckCircle2, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, CheckCircle2, MessageSquare, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 import { sendToWhatsApp, getWhatsAppUrl } from '../utils/whatsappNotification';
 import { sendEmailNotification, getOutlookWebUrl, TARGET_NOTIFICATION_EMAIL } from '../utils/emailNotification';
@@ -69,8 +69,8 @@ export function ContactSection() {
             <div className="space-y-5 sm:space-y-6">
               <div className="flex items-start gap-4">
                 <MapPin className="mt-1 h-6 w-6 shrink-0 text-[var(--yellow)]" />
-                <div>
-                  <p style={{ fontFamily: 'var(--font-body)' }} className="text-white">
+                <div className="w-full">
+                  <p style={{ fontFamily: 'var(--font-body)' }} className="text-white font-semibold">
                     C2C Tech Solutions Pvt Ltd
                   </p>
                   <p style={{ fontFamily: 'var(--font-body)' }} className="text-white/80 leading-relaxed">
@@ -80,6 +80,18 @@ export function ContactSection() {
                     <br />
                     Vijayawada - 520010
                   </p>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=C2C+Tech+Solutions+Plot+No+301+Sultan+Plaza+Benz+Circle+Vijayawada+520010"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-3 px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-[var(--yellow)] text-white hover:text-[var(--navy)] text-xs md:text-sm font-semibold transition-all border border-white/20 group/map shadow-sm"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                    title="Open in Google Maps"
+                  >
+                    <MapPin className="w-4 h-4 text-[var(--yellow)] group-hover/map:text-[var(--navy)] transition-colors" />
+                    <span>View on Google Maps</span>
+                    <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                  </a>
                 </div>
               </div>
 
