@@ -721,57 +721,6 @@ export const curriculums: CourseCurriculum[] = [
         ]
       }
     ]
-  },
-  {
-    courseId: 'DSP & Wireless Communication',
-    title: 'DIGITAL SIGNAL PROCESSING & WIRELESS NETWORKS',
-    modules: [
-      {
-        title: 'MODULE 01 - Discrete-Time Signals & Systems',
-        topics: [
-          { title: 'Sampling Theorem, Nyquist Rate & Aliasing' },
-          { title: 'Z-Transform & Region of Convergence' },
-          { title: 'Discrete Fourier Transform (DFT) & FFT Algorithms' },
-          { title: 'LTI Systems, Convolution & Impulse Response' }
-        ]
-      },
-      {
-        title: 'MODULE 02 - Digital Filter Design',
-        topics: [
-          { title: 'FIR Filter Design: Windowing & Frequency Sampling' },
-          { title: 'IIR Filter Design: Butterworth & Chebyshev Transformations' },
-          { title: 'Finite Word Length Effects & Filter Stability' },
-          { title: 'MATLAB Filter Design & Analysis Tool (FDATool)' }
-        ]
-      },
-      {
-        title: 'MODULE 03 - MATLAB / Simulink Simulation for ECE',
-        topics: [
-          { title: 'MATLAB Scripting, Matrix Math & Signal Visualization' },
-          { title: 'Simulink Dynamic System Modeling' },
-          { title: 'Spectrum Analyzers, Eye Diagrams & Constellation Plots' },
-          { title: 'Noise Modeling: AWGN & Rayleigh/Rician Fading' }
-        ]
-      },
-      {
-        title: 'MODULE 04 - Digital Modulation & Communication',
-        topics: [
-          { title: 'Baseband vs Passband Transmission' },
-          { title: 'Digital Modulation: BPSK, QPSK, 16-QAM, 64-QAM' },
-          { title: 'Bit Error Rate (BER) vs SNR Performance' },
-          { title: 'Channel Coding: Convolutional & Turbo Codes' }
-        ]
-      },
-      {
-        title: 'MODULE 05 - Modern RF, SDR & 5G Wireless',
-        topics: [
-          { title: 'Software Defined Radio (SDR) Concepts & GNU Radio' },
-          { title: 'OFDM (Orthogonal Frequency Division Multiplexing)' },
-          { title: 'MIMO & Beamforming Technologies' },
-          { title: '5G NR Architecture & Cellular Network Protocols' }
-        ]
-      }
-    ]
   }
 ];
 

@@ -31,10 +31,9 @@ import {
   Radio,
   CircuitBoard,
   Wifi,
-  Activity,
 } from 'lucide-react';
 
-export type CurriculumId = 'data-science-ai' | 'core-python' | 'ai-mastery' | 'master-ms-office' | 'agentic-ai' | 'cyber-security' | 'data-analytics' | 'dotnet-fullstack' | 'java-fullstack' | 'python-fullstack' | 'vlsi-design' | 'iot-embedded' | 'embedded-systems' | 'pcb-design' | 'dsp-wireless';
+export type CurriculumId = 'data-science-ai' | 'core-python' | 'ai-mastery' | 'master-ms-office' | 'agentic-ai' | 'cyber-security' | 'data-analytics' | 'dotnet-fullstack' | 'java-fullstack' | 'python-fullstack' | 'vlsi-design' | 'iot-embedded' | 'embedded-systems' | 'pcb-design';
 
 export type CourseCategory =
   | 'Basic Courses'
@@ -260,15 +259,6 @@ export const COURSES: Course[] = [
     icon: Radio,
     summary: 'Schematic capture, multi-layer PCB layout routing, signal integrity, and fabrication standards with KiCAD/Altium.',
     curriculumId: 'pcb-design',
-  },
-  {
-    id: 'dsp-wireless',
-    name: 'DSP & Wireless Communication',
-    category: 'Core Courses',
-    level: 'Advanced',
-    icon: Activity,
-    summary: 'Digital signal processing algorithms, MATLAB/Simulink modeling, SDR, RF communication, and 5G wireless principles.',
-    curriculumId: 'dsp-wireless',
   },
   {
     id: 'prompt-engineering',
