@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Zap, CheckCircle2, ArrowRight, BarChart3, X, Sparkles } from 'lucide-react';
+import { Target, TrendingUp, Zap, CheckCircle2, XCircle, ArrowRight, BarChart3, X, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 import { sendToWhatsApp } from '../utils/whatsappNotification';
 import { sendEmailNotification } from '../utils/emailNotification';
@@ -87,12 +87,12 @@ export function DigitalMarketingPage() {
       name: "Basic",
       bestFor: "Emerging brands building an online footprint",
       features: [
-        { label: "Strategy", value: "Brand Audit & Content Roadmap" },
-        { label: "Content", value: "12 Custom Visual & Copy Assets / mo" },
-        { label: "Organic Mgmt", value: "Included" },
-        { label: "Paid Ads", value: "—" },
-        { label: "CRO", value: "—" },
-        { label: "Reporting", value: "Monthly Reach & Engagement Report" },
+        { label: "Strategy", value: "Brand Audit & Content Roadmap", available: true },
+        { label: "Content", value: "12 Custom Visual & Copy Assets / mo", available: true },
+        { label: "Organic Mgmt", value: "Included", available: true },
+        { label: "Reporting", value: "Monthly Reach & Engagement Report", available: true },
+        { label: "Paid Ads", value: "Not Available", available: false },
+        { label: "CRO", value: "Not Available", available: false },
       ],
       popular: false,
     },
@@ -100,12 +100,12 @@ export function DigitalMarketingPage() {
       name: "Standard",
       bestFor: "Businesses looking to generate qualified leads",
       features: [
-        { label: "Strategy", value: "Market Analysis & Funnel Mapping" },
-        { label: "Content", value: "20 Custom Visual & Copy Assets / mo" },
-        { label: "Organic Mgmt", value: "Included" },
-        { label: "Paid Ads", value: "Setup, Mgmt & Optimization (Ad spend extra)" },
-        { label: "CRO", value: "—" },
-        { label: "Reporting", value: "Bi-Weekly ROI & Performance Breakdown" },
+        { label: "Strategy", value: "Market Analysis & Funnel Mapping", available: true },
+        { label: "Content", value: "20 Custom Visual & Copy Assets / mo", available: true },
+        { label: "Organic Mgmt", value: "Included", available: true },
+        { label: "Paid Ads", value: "Setup, Mgmt & Optimization (Ad spend extra)", available: true },
+        { label: "Reporting", value: "Bi-Weekly ROI & Performance Breakdown", available: true },
+        { label: "CRO", value: "Not Available", available: false },
       ],
       popular: true,
     },
@@ -113,12 +113,12 @@ export function DigitalMarketingPage() {
       name: "Premium",
       bestFor: "Scale-ups & enterprises aiming for maximum ROI",
       features: [
-        { label: "Strategy", value: "Full-Funnel Architecture & CRO Strategy" },
-        { label: "Content", value: "30 Custom Visual & Copy Assets / mo (Daily)" },
-        { label: "Organic Mgmt", value: "Priority Publishing & Community Mgmt" },
-        { label: "Paid Ads", value: "Multichannel Campaigns & A/B Testing" },
-        { label: "CRO", value: "Landing Page & Checkout Friction Audits" },
-        { label: "Reporting", value: "Dedicated Manager + Weekly Strategy Reviews" },
+        { label: "Strategy", value: "Full-Funnel Architecture & CRO Strategy", available: true },
+        { label: "Content", value: "30 Custom Visual & Copy Assets / mo (Daily)", available: true },
+        { label: "Organic Mgmt", value: "Priority Publishing & Community Mgmt", available: true },
+        { label: "Paid Ads", value: "Multichannel Campaigns & A/B Testing", available: true },
+        { label: "CRO", value: "Landing Page & Checkout Friction Audits", available: true },
+        { label: "Reporting", value: "Dedicated Manager + Weekly Strategy Reviews", available: true },
       ],
       popular: false,
     }
@@ -356,13 +356,27 @@ export function DigitalMarketingPage() {
 
                 <div className="flex-1 space-y-6">
                   {plan.features.map((feature, fIdx) => (
-                    <div key={fIdx} className="flex gap-3">
+                    <div key={fIdx} className={`flex gap-3 ${!feature.available ? 'opacity-65' : ''}`}>
                       <div className="shrink-0 mt-0.5">
-                        <CheckCircle2 className={`w-5 h-5 ${feature.value === '—' ? 'text-gray-300 opacity-50' : plan.popular ? 'text-[var(--yellow)]' : 'text-blue-600'}`} />
+                        {feature.available ? (
+                          <CheckCircle2 className={`w-5 h-5 ${plan.popular ? 'text-[var(--yellow)]' : 'text-emerald-600'}`} />
+                        ) : (
+                          <XCircle className={`w-5 h-5 ${plan.popular ? 'text-red-400' : 'text-rose-500'}`} />
+                        )}
                       </div>
                       <div>
-                        <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${plan.popular ? 'text-gray-400' : 'text-gray-500'}`}>{feature.label}</p>
-                        <p className={`text-sm ${feature.value === '—' ? 'opacity-50' : ''}`} style={{ fontFamily: 'var(--font-body)' }}>
+                        <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${
+                          plan.popular 
+                            ? (feature.available ? 'text-gray-300' : 'text-gray-400/90') 
+                            : (feature.available ? 'text-gray-500' : 'text-gray-400')
+                        }`}>
+                          {feature.label}
+                        </p>
+                        <p className={`text-sm ${
+                          !feature.available 
+                            ? (plan.popular ? 'text-gray-400' : 'text-gray-500 font-medium') 
+                            : ''
+                        }`} style={{ fontFamily: 'var(--font-body)' }}>
                           {feature.value}
                         </p>
                       </div>
