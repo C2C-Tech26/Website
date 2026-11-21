@@ -427,33 +427,20 @@ export function DigitalMarketingPage() {
 
           <div className="animate-marquee-scroll flex gap-4 md:gap-6 items-center py-1">
             {[...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS].map((client, idx) => {
-              const step = idx % 3;
-              // 3-step cycle: Grey -> Dark Grey -> Yellow
-              const cardStyles =
-                step === 0
-                  ? 'bg-slate-700/90 hover:bg-[var(--yellow)] border-slate-600/80 hover:border-yellow-300'
-                  : step === 1
-                  ? 'bg-[#111927] hover:bg-[var(--yellow)] border-slate-800 hover:border-yellow-300'
-                  : 'bg-[var(--yellow)] hover:bg-yellow-400 border-yellow-300/80';
+              const isDarker = idx % 2 === 1;
+              // Alternating: Grey and 1-step Darker Grey (No yellow)
+              const cardStyles = isDarker
+                ? 'bg-[#131d2e] hover:bg-[#1b283d] border-white/10 hover:border-white/25'
+                : 'bg-[#253247] hover:bg-[#2d3c54] border-white/15 hover:border-white/30';
 
-              const titleStyles =
-                step === 2
-                  ? 'text-[var(--navy)]'
-                  : 'text-white group-hover:text-[var(--navy)]';
-
-              const taglineStyles =
-                step === 2
-                  ? 'text-[var(--navy)]/80 font-semibold'
-                  : step === 0
-                  ? 'text-slate-300 group-hover:text-[var(--navy)]/80 font-medium'
-                  : 'text-slate-400 group-hover:text-[var(--navy)]/80 font-medium';
+              const taglineStyles = isDarker ? 'text-slate-400' : 'text-slate-300';
 
               return (
                 <div
                   key={`${client.id}-${idx}`}
                   className={`flex items-center gap-3.5 ${cardStyles} border rounded-2xl p-3 shadow-md transition-all duration-300 w-64 sm:w-72 h-24 shrink-0 group cursor-default`}
                 >
-                  <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden bg-white border border-black/5 flex items-center justify-center p-1.5 shrink-0 shadow-sm">
+                  <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center p-1.5 shrink-0 shadow-sm">
                     <img
                       src={client.logo}
                       alt={client.name}
@@ -463,14 +450,14 @@ export function DigitalMarketingPage() {
                   </div>
                   <div className="min-w-0 flex-1 text-left">
                     <p
-                      className={`text-xs sm:text-sm font-bold ${titleStyles} truncate leading-tight transition-colors duration-300`}
+                      className="text-xs sm:text-sm font-bold text-white truncate leading-tight"
                       style={{ fontFamily: 'var(--font-heading)' }}
                       title={client.name}
                     >
                       {client.name}
                     </p>
                     <p
-                      className={`text-[10px] sm:text-xs ${taglineStyles} truncate leading-tight mt-1 transition-colors duration-300`}
+                      className={`text-[10px] sm:text-xs ${taglineStyles} font-medium truncate leading-tight mt-1`}
                       style={{ fontFamily: 'var(--font-body)' }}
                       title={client.tagline}
                     >
