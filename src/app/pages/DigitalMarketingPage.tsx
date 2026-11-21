@@ -208,51 +208,114 @@ export function DigitalMarketingPage() {
 
       {/* The Conversion Engine Section */}
       <section className="pt-6 md:pt-8 pb-6 md:pb-8 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto">
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8">
           
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
-              <Zap className="w-7 h-7 text-blue-600" />
+          {/* Card 1: The Conversion Engine */}
+          <div className="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_32px_-6px_rgba(15,23,42,0.1)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative group overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-80 group-hover:h-1.5 transition-all duration-300" />
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 shadow-2xs group-hover:scale-105 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-blue-600" />
+                </div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50/80 px-3 py-1 rounded-full border border-blue-200/60" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Performance Engine
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-[var(--navy)] mb-3 tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+                The Conversion Engine
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-6" style={{ fontFamily: 'var(--font-body)' }}>
+                The ultimate metric of our success is your bottom line. By blending data analytics with creative execution, we continuously test and optimize every campaign parameter to remove friction and boost conversions.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-[var(--navy)] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-              The Conversion Engine
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-4" style={{ fontFamily: 'var(--font-body)' }}>
-              The ultimate metric of our success is your bottom line. By seamlessly blending data analytics with creative execution, we continuously monitor, test, and optimize every campaign parameter.
-            </p>
-            <p className="text-gray-600 leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
-              From refining ad copy and tweaking audience parameters to optimizing landing page layouts, we relentlessly remove friction. We deliver qualified leads and measurable conversions, ensuring every marketing rupee yields a tangible return.
-            </p>
+            
+            <div className="pt-4 border-t border-slate-100 space-y-2.5">
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                <span>Multi-variant ad copy & creative testing</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                <span>Frictionless landing page architecture</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                <span>Tangible returns on every rupee spent</span>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center mb-6">
-              <BarChart3 className="w-7 h-7 text-[var(--yellow)]" />
+          {/* Card 2: Data-Driven Marketing */}
+          <div className="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_32px_-6px_rgba(15,23,42,0.1)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative group overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-500 opacity-80 group-hover:h-1.5 transition-all duration-300" />
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 shadow-2xs group-hover:scale-105 transition-transform duration-300">
+                  <BarChart3 className="w-6 h-6 text-amber-600" />
+                </div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50/80 px-3 py-1 rounded-full border border-amber-200/60" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Data Strategy
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-[var(--navy)] mb-3 tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+                Data-Driven Marketing
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-6" style={{ fontFamily: 'var(--font-body)' }}>
+                Vanity metrics like likes and views don't pay the bills—conversions do. Powered by our proprietary &ldquo;Client-to-Conversion&rdquo; (C2C) framework, we turn cold audiences into loyal, high-value clients.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-[var(--navy)] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-              Data-Driven Marketing
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-4" style={{ fontFamily: 'var(--font-body)' }}>
-              Vanity metrics like likes and views don't pay the bills—conversions do. We engineer end-to-end digital strategies designed to turn cold audiences into long-term, high-value clients.
-            </p>
-            <p className="text-gray-600 leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
-              Powered by our proprietary "Client-to-Conversion" (C2C) framework, we bridge the gap between initial brand discovery and revenue growth.
-            </p>
+
+            <div className="pt-4 border-t border-slate-100 space-y-2.5">
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>Proprietary C2C conversion methodology</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>High-intent audience behavioral mapping</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>Zero budget wasted on vanity metrics</span>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center mb-6">
-              <TrendingUp className="w-7 h-7 text-green-600" />
+          {/* Card 3: Engineered for High ROI */}
+          <div className="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_32px_-6px_rgba(15,23,42,0.1)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative group overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 opacity-80 group-hover:h-1.5 transition-all duration-300" />
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 shadow-2xs group-hover:scale-105 transition-transform duration-300">
+                  <TrendingUp className="w-6 h-6 text-emerald-600" />
+                </div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50/80 px-3 py-1 rounded-full border border-emerald-200/60" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Revenue Growth
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-[var(--navy)] mb-3 tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+                Engineered for High ROI
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-6" style={{ fontFamily: 'var(--font-body)' }}>
+                Traffic is useless if it doesn't convert into revenue. We continuously analyze and refine every touchpoint in your marketing funnel to deliver a steady pipeline of sales-ready leads at optimal acquisition cost.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-[var(--navy)] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-              Engineered for High ROI
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-4" style={{ fontFamily: 'var(--font-body)' }}>
-              Traffic is useless if it doesn't convert. We continuously analyze, test, and refine every touchpoint in your marketing funnel—from high-converting ad copy to high-performing landing pages.
-            </p>
-            <p className="text-gray-600 leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
-              Every marketing rupee you invest is tracked against direct business outcomes, ensuring zero wasted ad spend and a steady pipeline of sales-ready leads. Let's build your growth engine today.
-            </p>
+
+            <div className="pt-4 border-t border-slate-100 space-y-2.5">
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>Real-time CAC & revenue tracking</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>Continuous funnel & landing page refinement</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>Predictable pipeline of qualified inquiries</span>
+              </div>
+            </div>
           </div>
 
         </div>
