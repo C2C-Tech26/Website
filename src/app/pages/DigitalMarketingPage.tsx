@@ -207,7 +207,7 @@ export function DigitalMarketingPage() {
       </section>
 
       {/* The Conversion Engine Section */}
-      <section className="pt-6 md:pt-8 pb-16 md:pb-20 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto">
+      <section className="pt-6 md:pt-8 pb-6 md:pb-8 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-3 gap-12">
           
           <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
@@ -259,9 +259,9 @@ export function DigitalMarketingPage() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-24 bg-white px-6 md:px-12 lg:px-24">
+      <section className="pt-8 md:pt-10 pb-16 md:pb-20 bg-white px-6 md:px-12 lg:px-24">
         <div className="max-w-[1440px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-[var(--navy)] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
               Partnership Plans
             </h2>
