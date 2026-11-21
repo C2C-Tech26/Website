@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, CheckCircle2, MessageSquare, ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { sendToWhatsApp, getWhatsAppUrl } from '../utils/whatsappNotification';
 import { sendEmailNotification, getOutlookWebUrl, TARGET_NOTIFICATION_EMAIL } from '../utils/emailNotification';
 
@@ -244,21 +244,27 @@ export function ContactSection() {
 
           <div className="flex gap-3 sm:gap-4">
             <a
-              href="#"
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-[var(--yellow)] hover:text-[var(--navy)]"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Twitter"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-[var(--yellow)] hover:text-[var(--navy)]"
             >
               <Twitter className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-[var(--yellow)] hover:text-[var(--navy)]"
             >

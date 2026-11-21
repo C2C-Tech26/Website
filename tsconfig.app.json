@@ -19,11 +19,19 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./src/*",
+        "./project2edu-main/src/*"
+      ],
+      "*": [
+        "./project2edu-main/node_modules/*"
       ]
-    }
+    },
+    "typeRoots": [
+      "./project2edu-main/node_modules/@types"
+    ]
   },
   "include": [
     "src"
