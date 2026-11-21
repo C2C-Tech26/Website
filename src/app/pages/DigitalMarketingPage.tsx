@@ -412,14 +412,11 @@ export function DigitalMarketingPage() {
               className="text-xs md:text-sm font-bold uppercase tracking-wider text-[var(--yellow)] flex items-center gap-1.5"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Our Digital Marketing Clients
-            </span>
-            <span className="hidden sm:inline-block text-xs text-blue-200/70 font-medium">
-              | Brands Scaled by C2C Tech Solutions
+              Our Collaborated Brands
             </span>
           </div>
-          <span className="text-[11px] font-semibold text-blue-200/60 uppercase tracking-wider hidden md:inline-block">
-            Continuous Campaign Performance
+          <span className="text-[11px] font-semibold text-blue-200/75 uppercase tracking-wider hidden md:inline-block">
+            Fueling Growth · Delivering Proven ROI
           </span>
         </div>
 
