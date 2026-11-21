@@ -3,14 +3,15 @@ import { useState } from 'react';
 import { sendToWhatsApp } from '../utils/whatsappNotification';
 import { sendEmailNotification } from '../utils/emailNotification';
 
-import fruitUpLogo from '../../assets/images/clients/fruit-up.jpg';
-import aquaKushiLogo from '../../assets/images/clients/aqua-kushi.jpg';
-import hrrLogo from '../../assets/images/clients/hrr-royal-treat.jpg';
-import sriLakshmiLogo from '../../assets/images/clients/sri-lakshmi-hostel.jpg';
-import balajiMessLogo from '../../assets/images/clients/balaji-mess.jpg';
-import aadhyaLogo from '../../assets/images/clients/aadhya.jpg';
-import vrsLogo from '../../assets/images/clients/vrs-suppliers.jpg';
+import fruitUpLogo from '../../assets/images/clients/fruit-up.png';
+import aquaKushiLogo from '../../assets/images/clients/aqua-kushi.png';
+import hrrLogo from '../../assets/images/clients/hrr-royal-treat.png';
+import sriLakshmiLogo from '../../assets/images/clients/sri-lakshmi-hostel.png';
+import balajiMessLogo from '../../assets/images/clients/balaji-mess.png';
+import aadhyaLogo from '../../assets/images/clients/aadhya.png';
+import vrsLogo from '../../assets/images/clients/vrs-suppliers.png';
 import apMsmeLogo from '../../assets/images/clients/ap-msme.png';
+import siddharthaAlumniLogo from '../../assets/images/clients/siddhartha-alumni.png';
 
 interface DigitalMarketingClient {
   id: string;
@@ -27,34 +28,22 @@ const DIGITAL_MARKETING_CLIENTS: DigitalMarketingClient[] = [
     logo: fruitUpLogo,
   },
   {
-    id: 'aqua-kushi',
-    name: 'Aqua Kushi',
-    tagline: 'Packaged Drinking Water',
-    logo: aquaKushiLogo,
-  },
-  {
-    id: 'hrr-royal-treat',
-    name: 'HRR The Royal Treat',
-    tagline: 'Fine Dining & Hospitality',
-    logo: hrrLogo,
-  },
-  {
-    id: 'sri-lakshmi-hostel',
-    name: 'Sri Lakshmi Ladies Hostel',
-    tagline: 'Where Standard Meets Luxury',
-    logo: sriLakshmiLogo,
-  },
-  {
     id: 'balaji-mess',
     name: 'Balaji Mess',
     tagline: 'Meals & Biryani',
     logo: balajiMessLogo,
   },
   {
-    id: 'aadhya',
-    name: 'Aadhya',
-    tagline: 'Boutique & Designer Studio',
-    logo: aadhyaLogo,
+    id: 'aqua-kushi',
+    name: 'Aqua Kushi',
+    tagline: 'Packaged Drinking Water',
+    logo: aquaKushiLogo,
+  },
+  {
+    id: 'ap-msme',
+    name: 'AP MSME Association',
+    tagline: 'Micro, Small & Medium Enterprises',
+    logo: apMsmeLogo,
   },
   {
     id: 'vrs-suppliers',
@@ -63,10 +52,28 @@ const DIGITAL_MARKETING_CLIENTS: DigitalMarketingClient[] = [
     logo: vrsLogo,
   },
   {
-    id: 'ap-msme',
-    name: 'AP MSME Association',
-    tagline: 'Micro, Small & Medium Enterprises',
-    logo: apMsmeLogo,
+    id: 'hrr-royal-treat',
+    name: 'HRR The Royal Treat',
+    tagline: 'Fine Dining & Hospitality',
+    logo: hrrLogo,
+  },
+  {
+    id: 'siddhartha-alumni',
+    name: 'PBS Siddhartha Alumni',
+    tagline: 'College Alumni Association',
+    logo: siddharthaAlumniLogo,
+  },
+  {
+    id: 'sri-lakshmi-hostel',
+    name: 'Sri Lakshmi Ladies Hostel',
+    tagline: 'Where Standard Meets Luxury',
+    logo: sriLakshmiLogo,
+  },
+  {
+    id: 'aadhya',
+    name: 'Aadhya',
+    tagline: 'Boutique & Designer Studio',
+    logo: aadhyaLogo,
   },
 ];
 
@@ -280,12 +287,12 @@ export function DigitalMarketingPage() {
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-[var(--navy)] via-[var(--navy)]/80 to-transparent z-10" />
 
           <div className="animate-marquee-scroll flex gap-4 md:gap-6 items-center py-1">
-            {[...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS].map((client, idx) => (
+            {[...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS].map((client, idx) => (
               <div
                 key={`${client.id}-${idx}`}
-                className="flex items-center gap-3.5 bg-[#14233c] hover:bg-[#1d3153] border border-white/15 hover:border-[var(--yellow)] rounded-2xl px-4 py-2.5 shadow-sm transition-all duration-300 shrink-0 group cursor-default"
+                className="flex items-center gap-3.5 bg-[#14233c] hover:bg-[#1d3153] border border-white/15 hover:border-[var(--yellow)] rounded-2xl p-3 shadow-sm transition-all duration-300 w-64 sm:w-72 h-24 shrink-0 group cursor-default"
               >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center p-1 shrink-0 shadow-2xs">
+                <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center p-1.5 shrink-0 shadow-2xs">
                   <img
                     src={client.logo}
                     alt={client.name}
@@ -293,16 +300,18 @@ export function DigitalMarketingPage() {
                     loading="eager"
                   />
                 </div>
-                <div className="pr-2 text-left">
+                <div className="min-w-0 flex-1 text-left">
                   <p
-                    className="text-xs md:text-sm font-bold text-white whitespace-nowrap leading-tight group-hover:text-[var(--yellow)] transition-colors"
+                    className="text-xs sm:text-sm font-bold text-white truncate leading-tight group-hover:text-[var(--yellow)] transition-colors"
                     style={{ fontFamily: 'var(--font-heading)' }}
+                    title={client.name}
                   >
                     {client.name}
                   </p>
                   <p
-                    className="text-[10px] md:text-xs text-blue-200/80 font-medium whitespace-nowrap leading-tight mt-0.5"
+                    className="text-[10px] sm:text-xs text-blue-200/80 font-medium truncate leading-tight mt-1"
                     style={{ fontFamily: 'var(--font-body)' }}
+                    title={client.tagline}
                   >
                     {client.tagline}
                   </p>
