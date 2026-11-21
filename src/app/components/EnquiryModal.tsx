@@ -91,9 +91,6 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
     } else if (!/^\d{10}$/.test(formData.mobile)) {
       newErrors.mobile = 'Mobile number must be exactly 10 digits';
     }
-    if (!formData.college.trim()) {
-      newErrors.college = 'College/Institution name is required';
-    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -122,7 +119,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         studentName: formData.studentName.trim(),
         email: formData.email.trim(),
         mobile: formData.mobile.trim(),
-        college: formData.college.trim(),
+        college: formData.college.trim() || 'Not specified',
         course: courseName,
         courseCategory,
         message: formData.message.trim(),
@@ -398,7 +395,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     fontFamily: 'var(--font-body, sans-serif)',
                   }}
                 >
-                  College / Institution Name <span className="text-red-500">*</span>
+                  College / Institution Name <span className="text-gray-400 font-normal text-xs">(Optional)</span>
                 </label>
                 <input
                   id="college"
@@ -406,16 +403,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   type="text"
                   value={formData.college}
                   onChange={handleChange}
-                  placeholder="Enter your college or institution"
-                  className="w-full rounded-lg border px-4 py-2.5 text-sm outline-none transition-colors focus:ring-2"
+                  placeholder="Enter your college or institution (optional)"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none transition-colors focus:ring-2 focus:ring-[var(--yellow)]"
                   style={{
-                    borderColor: errors.college ? '#ef4444' : '#d1d5db',
                     fontFamily: 'var(--font-body, sans-serif)',
                   }}
                 />
-                {errors.college && (
-                  <p className="mt-1 text-xs text-red-500">{errors.college}</p>
-                )}
               </div>
 
               {/* Course Interested In (read-only) */}
