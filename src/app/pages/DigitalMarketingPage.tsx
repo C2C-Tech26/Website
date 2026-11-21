@@ -179,7 +179,7 @@ export function DigitalMarketingPage() {
     <div className="pt-20 min-h-screen bg-gray-50">
       
       {/* Hero Section */}
-      <section className="relative py-20 px-6 md:px-12 lg:px-24 bg-[var(--navy)] overflow-hidden">
+      <section className="relative pt-16 md:pt-20 pb-12 md:pb-14 px-6 md:px-12 lg:px-24 bg-[var(--navy)] overflow-hidden">
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] rounded-full bg-[var(--yellow)]/10 blur-[100px]"></div>
         
@@ -207,7 +207,7 @@ export function DigitalMarketingPage() {
       </section>
 
       {/* The Conversion Engine Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto">
+      <section className="pt-6 md:pt-8 pb-16 md:pb-20 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-3 gap-12">
           
           <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
