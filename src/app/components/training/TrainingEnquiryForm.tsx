@@ -185,7 +185,7 @@ export function TrainingEnquiryForm() {
                     value={form.fullName}
                     onChange={(e) => update('fullName', e.target.value)}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[var(--navy)] focus:ring-1 focus:ring-[var(--navy)] transition-all"
-                    placeholder="John Doe"
+                    placeholder=""
                   />
                 </div>
                 <div>
@@ -196,7 +196,7 @@ export function TrainingEnquiryForm() {
                     value={form.email}
                     onChange={(e) => update('email', e.target.value)}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[var(--navy)] focus:ring-1 focus:ring-[var(--navy)] transition-all"
-                    placeholder="john@example.com"
+                    placeholder=""
                   />
                 </div>
               </div>
@@ -210,7 +210,7 @@ export function TrainingEnquiryForm() {
                     value={form.phone}
                     onChange={(e) => update('phone', e.target.value)}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[var(--navy)] focus:ring-1 focus:ring-[var(--navy)] transition-all"
-                    placeholder="+91 98765 43210"
+                    placeholder=""
                   />
                 </div>
                 <div>
