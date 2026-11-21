@@ -18,6 +18,7 @@ const categoryColors: Record<string, { badge: string; border: string }> = {
   'Basic Courses': { badge: 'bg-sky-100 text-sky-800', border: 'border-sky-200' },
   'Advanced IT Courses': { badge: 'bg-blue-100 text-blue-800', border: 'border-blue-200' },
   'Full Stack Courses': { badge: 'bg-orange-100 text-orange-800', border: 'border-orange-200' },
+  'Core Courses': { badge: 'bg-indigo-100 text-indigo-800', border: 'border-indigo-200' },
   'Quick Courses': { badge: 'bg-rose-100 text-rose-800', border: 'border-rose-200' },
   'Add on Courses': { badge: 'bg-emerald-100 text-emerald-800', border: 'border-emerald-200' },
 };
@@ -237,7 +238,7 @@ export function ExploreCoursesPage() {
                       const Icon = course.icon;
                       const isExpanded = !!expandedCourses[course.id];
                       const curriculum = getCurriculumById(course.name);
-                      const duration = course.category === 'Full Stack Courses' ? '4-6 Months' : course.category === 'Advanced IT Courses' ? '3-4 Months' : course.category === 'Basic Courses' ? '2-3 Months' : '1 Month';
+                      const duration = course.category === 'Full Stack Courses' ? '4-6 Months' : (course.category === 'Advanced IT Courses' || course.category === 'Core Courses') ? '3-4 Months' : course.category === 'Basic Courses' ? '2-3 Months' : '1 Month';
                       const keyTopics = curriculum?.modules.slice(0, 4).map((m) => m.title.replace(/^MODULE \d+ - /i, '').replace(/^\d+ /i, '').replace(/^PHASE \d+ - /i, '')) || [];
 
                       return (

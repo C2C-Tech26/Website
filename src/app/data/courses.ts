@@ -27,14 +27,20 @@ import {
   Terminal,
   WandSparkles,
   Workflow,
+  Cpu,
+  Radio,
+  CircuitBoard,
+  Wifi,
+  Activity,
 } from 'lucide-react';
 
-export type CurriculumId = 'data-science-ai' | 'core-python' | 'ai-mastery' | 'master-ms-office' | 'agentic-ai' | 'cyber-security' | 'data-analytics' | 'dotnet-fullstack' | 'java-fullstack' | 'python-fullstack';
+export type CurriculumId = 'data-science-ai' | 'core-python' | 'ai-mastery' | 'master-ms-office' | 'agentic-ai' | 'cyber-security' | 'data-analytics' | 'dotnet-fullstack' | 'java-fullstack' | 'python-fullstack' | 'vlsi-design' | 'iot-embedded' | 'embedded-systems' | 'pcb-design' | 'dsp-wireless';
 
 export type CourseCategory =
   | 'Basic Courses'
   | 'Advanced IT Courses'
   | 'Full Stack Courses'
+  | 'Core Courses'
   | 'Quick Courses'
   | 'Add on Courses';
 
@@ -42,6 +48,7 @@ export const COURSE_CATEGORY_ORDER: CourseCategory[] = [
   'Basic Courses',
   'Advanced IT Courses',
   'Full Stack Courses',
+  'Core Courses',
   'Quick Courses',
   'Add on Courses',
 ];
@@ -217,6 +224,51 @@ export const COURSES: Course[] = [
     level: 'Advanced',
     icon: GitBranch,
     summary: 'Advanced DevOps tooling, cloud add-ons, and deployment automation at scale.',
+  },
+  {
+    id: 'vlsi-design',
+    name: 'VLSI Design & Verification',
+    category: 'Core Courses',
+    level: 'Advanced',
+    icon: Cpu,
+    summary: 'Digital design, Verilog/SystemVerilog RTL modeling, FPGA synthesis, and UVM-based functional verification.',
+    curriculumId: 'vlsi-design',
+  },
+  {
+    id: 'iot-embedded',
+    name: 'Internet of Things (IoT)',
+    category: 'Core Courses',
+    level: 'Beginner',
+    icon: Wifi,
+    summary: 'Sensor interfacing, ESP32/Raspberry Pi microcontrollers, MQTT/HTTP protocols, and cloud IoT telemetry.',
+    curriculumId: 'iot-embedded',
+  },
+  {
+    id: 'embedded-systems',
+    name: 'Embedded Systems Design',
+    category: 'Core Courses',
+    level: 'Advanced',
+    icon: CircuitBoard,
+    summary: 'Embedded C programming, ARM Cortex-M architecture, peripheral device drivers, and FreeRTOS task scheduling.',
+    curriculumId: 'embedded-systems',
+  },
+  {
+    id: 'pcb-design',
+    name: 'PCB Design & Hardware Architecture',
+    category: 'Core Courses',
+    level: 'Beginner',
+    icon: Radio,
+    summary: 'Schematic capture, multi-layer PCB layout routing, signal integrity, and fabrication standards with KiCAD/Altium.',
+    curriculumId: 'pcb-design',
+  },
+  {
+    id: 'dsp-wireless',
+    name: 'DSP & Wireless Communication',
+    category: 'Core Courses',
+    level: 'Advanced',
+    icon: Activity,
+    summary: 'Digital signal processing algorithms, MATLAB/Simulink modeling, SDR, RF communication, and 5G wireless principles.',
+    curriculumId: 'dsp-wireless',
   },
   {
     id: 'prompt-engineering',

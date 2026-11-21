@@ -511,6 +511,267 @@ export const curriculums: CourseCurriculum[] = [
         topics: [{ title: 'Git & GitHub' }, { title: 'Deployment (Render/Vercel)' }, { title: 'Real-time Projects' }, { title: 'Documentation' }, { title: 'Portfolio' }]
       }
     ]
+  },
+  {
+    courseId: 'VLSI Design & Verification',
+    title: 'COMPREHENSIVE VLSI DESIGN & UVM VERIFICATION',
+    modules: [
+      {
+        title: 'MODULE 01 - Digital Logic & CMOS Fundamentals',
+        topics: [
+          { title: 'Combinational & Sequential Logic Design' },
+          { title: 'Finite State Machines (Mealy & Moore FSM)' },
+          { title: 'CMOS Inverter & Logic Gate Characteristics' },
+          { title: 'Setup Time, Hold Time & Timing Hazards' },
+          { title: 'Clock Skew, Jitter & Metastability' }
+        ]
+      },
+      {
+        title: 'MODULE 02 - Verilog HDL & RTL Modeling',
+        topics: [
+          { title: 'Verilog Syntax, Data Types & Operators' },
+          { title: 'Behavioral, Dataflow & Structural Modeling' },
+          { title: 'Blocking vs Non-Blocking Assignments' },
+          { title: 'Testbench Architecture & Waveform Analysis' },
+          { title: 'Memory Modeling: FIFO & SRAM Design' }
+        ]
+      },
+      {
+        title: 'MODULE 03 - SystemVerilog for Verification',
+        topics: [
+          { title: 'SystemVerilog Data Types, Classes & OOP' },
+          { title: 'Randomization & Constraint-Driven Testing' },
+          { title: 'Functional Coverage & Cross-Coverage' },
+          { title: 'Interfaces, Modports & Clocking Blocks' },
+          { title: 'SystemVerilog Assertions (SVA) Basics' }
+        ]
+      },
+      {
+        title: 'MODULE 04 - UVM (Universal Verification Methodology)',
+        topics: [
+          { title: 'UVM Overview & Standard Class Hierarchy' },
+          { title: 'UVM Phases: Build, Connect, Run & Report' },
+          { title: 'UVM Sequences, Drivers & Sequencers' },
+          { title: 'UVM Monitors, Scoreboards & TLM Ports' },
+          { title: 'Factory Registration & Config DB Mechanism' }
+        ]
+      },
+      {
+        title: 'MODULE 05 - Synthesis & Static Timing Analysis (STA)',
+        topics: [
+          { title: 'ASIC Design Flow vs FPGA Architecture' },
+          { title: 'RTL to Gate-Level Logic Synthesis' },
+          { title: 'Timing Constraints (SDC) & Timing Violations' },
+          { title: 'Clock Domain Crossing (CDC) Techniques' },
+          { title: 'Industry Protocol Verification Project (SPI/I2C/AXI)' }
+        ]
+      }
+    ]
+  },
+  {
+    courseId: 'Internet of Things (IoT)',
+    title: 'SMART IOT & EMBEDDED CONNECTIVITY',
+    modules: [
+      {
+        title: 'MODULE 01 - IoT Architecture & Hardware Platforms',
+        topics: [
+          { title: 'Overview of IoT Ecosystem & 4-Tier Architecture' },
+          { title: 'Microcontrollers (ESP32, NodeMCU, Arduino, STM32)' },
+          { title: 'Sensor Fundamentals (Temperature, Humidity, Ultrasonic, Motion)' },
+          { title: 'Actuator Interfacing (Relays, Motors, Displays)' }
+        ]
+      },
+      {
+        title: 'MODULE 02 - Embedded Programming & Hardware Interfacing',
+        topics: [
+          { title: 'Embedded C/C++ & MicroPython for ESP32' },
+          { title: 'GPIO, ADC, DAC & PWM Control' },
+          { title: 'Serial Communication: UART, I2C & SPI' },
+          { title: 'Sensor Data Calibration & Filtering' }
+        ]
+      },
+      {
+        title: 'MODULE 03 - IoT Networking & Wireless Protocols',
+        topics: [
+          { title: 'Wi-Fi, Bluetooth Classic & BLE (Bluetooth Low Energy)' },
+          { title: 'MQTT Protocol Architecture & Mosquitto Broker' },
+          { title: 'HTTP/REST APIs, WebSockets & CoAP' },
+          { title: 'Payload Formatting with JSON & Protocol Buffers' }
+        ]
+      },
+      {
+        title: 'MODULE 04 - Cloud IoT & Dashboards',
+        topics: [
+          { title: 'Connecting to AWS IoT Core / ThingsBoard / Blynk' },
+          { title: 'Device Shadow & Telemetry Streams' },
+          { title: 'Real-time Alerts via SMS, Email & WhatsApp' },
+          { title: 'Data Storage & Time-Series Visualizations' }
+        ]
+      },
+      {
+        title: 'MODULE 05 - Edge Computing & Capstone Projects',
+        topics: [
+          { title: 'Over-The-Air (OTA) Firmware Updates' },
+          { title: 'TinyML / Edge AI Basics for Sensors' },
+          { title: 'Low Power Optimization & Sleep Modes' },
+          { title: 'Smart Agriculture / Smart City Prototype Project' }
+        ]
+      }
+    ]
+  },
+  {
+    courseId: 'Embedded Systems Design',
+    title: 'ARM CORTEX-M EMBEDDED SYSTEMS & RTOS',
+    modules: [
+      {
+        title: 'MODULE 01 - Advanced Embedded C & Hardware Interfacing',
+        topics: [
+          { title: 'Pointers, Arrays & Complex Data Structures in C' },
+          { title: 'Bitwise Operators & Register Manipulation' },
+          { title: 'Memory Layout: Flash, SRAM, Stack & Heap' },
+          { title: 'Volatile & Const Qualifiers in Hardware Access' }
+        ]
+      },
+      {
+        title: 'MODULE 02 - ARM Cortex-M Architecture',
+        topics: [
+          { title: 'Cortex-M Processor Pipeline & Registers' },
+          { title: 'Memory Map & Memory Protection Unit (MPU)' },
+          { title: 'Nested Vectored Interrupt Controller (NVIC)' },
+          { title: 'Interrupt Service Routines (ISRs) & Exception Handling' }
+        ]
+      },
+      {
+        title: 'MODULE 03 - Microcontroller Peripheral Drivers',
+        topics: [
+          { title: 'SysTick Timer, General Purpose & Advanced Timers' },
+          { title: 'PWM Generation & Duty Cycle Control' },
+          { title: 'UART Driver Implementation with Ring Buffers' },
+          { title: 'I2C & SPI Driver Development (Master/Slave)' }
+        ]
+      },
+      {
+        title: 'MODULE 04 - Real-Time Operating Systems (FreeRTOS)',
+        topics: [
+          { title: 'FreeRTOS Architecture & Task Creation' },
+          { title: 'Task Scheduling, States & Priority Inversion' },
+          { title: 'Synchronization: Binary & Counting Semaphores' },
+          { title: 'Mutual Exclusion: Mutexes & Recursive Mutexes' },
+          { title: 'Inter-Task Communication: Message Queues & Event Groups' }
+        ]
+      },
+      {
+        title: 'MODULE 05 - Device Drivers, Bootloaders & Projects',
+        topics: [
+          { title: 'Bare-Metal vs RTOS Architecture' },
+          { title: 'Custom Bootloader Design & Flash Reprogramming' },
+          { title: 'Hardware Debugging via JTAG & SWD' },
+          { title: 'Industrial Sensor Data Logger with RTOS Capstone' }
+        ]
+      }
+    ]
+  },
+  {
+    courseId: 'PCB Design & Hardware Architecture',
+    title: 'PCB DESIGN & HARDWARE ARCHITECTURE (KiCAD / ALTIUM)',
+    modules: [
+      {
+        title: 'MODULE 01 - Schematic Design & Component Libraries',
+        topics: [
+          { title: 'Electronic Fundamentals: R, L, C, Diodes & Transistors' },
+          { title: 'Schematic Capture in KiCAD / Altium Designer' },
+          { title: 'Creating Custom Symbols & Component Libraries' },
+          { title: 'Power Regulation Circuits (LDO & SMPS Design)' }
+        ]
+      },
+      {
+        title: 'MODULE 02 - Footprints & Package Standards',
+        topics: [
+          { title: 'Through-Hole (THT) vs Surface-Mount (SMD/SMT)' },
+          { title: 'Standard Packages: 0603, 0805, QFP, BGA, SOIC' },
+          { title: 'Custom Footprint Creation from Datasheets' },
+          { title: 'Bill of Materials (BOM) & Component Sourcing' }
+        ]
+      },
+      {
+        title: 'MODULE 03 - PCB Layout & Routing Techniques',
+        topics: [
+          { title: 'Board Outline, Mechanical Dimensions & Layer Stackup' },
+          { title: 'Component Placement Rules & Thermal Management' },
+          { title: 'Manual Routing, Net Classes & Track Width Calculation' },
+          { title: 'Vias: Through-hole, Blind & Buried Vias' }
+        ]
+      },
+      {
+        title: 'MODULE 04 - Power & Signal Integrity',
+        topics: [
+          { title: 'Ground Planes, Power Planes & Star Grounding' },
+          { title: 'Decoupling Capacitor Placement Best Practices' },
+          { title: 'Differential Pair Routing & Impedance Matching' },
+          { title: 'EMI/EMC Reduction Guidelines & Return Path Control' }
+        ]
+      },
+      {
+        title: 'MODULE 05 - Manufacturing & Fabrication (DFM)',
+        topics: [
+          { title: 'Design Rule Checks (DRC) & Electrical Rule Checks (ERC)' },
+          { title: 'Gerber File Generation & Verification' },
+          { title: 'Drill Files, Solder Mask & Silkscreen Layer Outputs' },
+          { title: 'PCB Fabrication Steps & SMT Assembly Process' }
+        ]
+      }
+    ]
+  },
+  {
+    courseId: 'DSP & Wireless Communication',
+    title: 'DIGITAL SIGNAL PROCESSING & WIRELESS NETWORKS',
+    modules: [
+      {
+        title: 'MODULE 01 - Discrete-Time Signals & Systems',
+        topics: [
+          { title: 'Sampling Theorem, Nyquist Rate & Aliasing' },
+          { title: 'Z-Transform & Region of Convergence' },
+          { title: 'Discrete Fourier Transform (DFT) & FFT Algorithms' },
+          { title: 'LTI Systems, Convolution & Impulse Response' }
+        ]
+      },
+      {
+        title: 'MODULE 02 - Digital Filter Design',
+        topics: [
+          { title: 'FIR Filter Design: Windowing & Frequency Sampling' },
+          { title: 'IIR Filter Design: Butterworth & Chebyshev Transformations' },
+          { title: 'Finite Word Length Effects & Filter Stability' },
+          { title: 'MATLAB Filter Design & Analysis Tool (FDATool)' }
+        ]
+      },
+      {
+        title: 'MODULE 03 - MATLAB / Simulink Simulation for ECE',
+        topics: [
+          { title: 'MATLAB Scripting, Matrix Math & Signal Visualization' },
+          { title: 'Simulink Dynamic System Modeling' },
+          { title: 'Spectrum Analyzers, Eye Diagrams & Constellation Plots' },
+          { title: 'Noise Modeling: AWGN & Rayleigh/Rician Fading' }
+        ]
+      },
+      {
+        title: 'MODULE 04 - Digital Modulation & Communication',
+        topics: [
+          { title: 'Baseband vs Passband Transmission' },
+          { title: 'Digital Modulation: BPSK, QPSK, 16-QAM, 64-QAM' },
+          { title: 'Bit Error Rate (BER) vs SNR Performance' },
+          { title: 'Channel Coding: Convolutional & Turbo Codes' }
+        ]
+      },
+      {
+        title: 'MODULE 05 - Modern RF, SDR & 5G Wireless',
+        topics: [
+          { title: 'Software Defined Radio (SDR) Concepts & GNU Radio' },
+          { title: 'OFDM (Orthogonal Frequency Division Multiplexing)' },
+          { title: 'MIMO & Beamforming Technologies' },
+          { title: '5G NR Architecture & Cellular Network Protocols' }
+        ]
+      }
+    ]
   }
 ];
 

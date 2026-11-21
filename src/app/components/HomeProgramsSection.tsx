@@ -29,6 +29,11 @@ const categoryMeta: Record<
     accentBg: 'bg-orange-500',
     subtitle: 'End-to-end full stack development pipelines (MERN, Java, Python, .NET)',
   },
+  'Core Courses': {
+    badge: 'bg-indigo-100 text-indigo-800 border border-indigo-200',
+    accentBg: 'bg-indigo-600',
+    subtitle: 'VLSI, IoT, Embedded Systems, PCB Design & ECE engineering tracks',
+  },
   'Quick Courses': {
     badge: 'bg-rose-100 text-rose-800 border border-rose-200',
     accentBg: 'bg-rose-500',

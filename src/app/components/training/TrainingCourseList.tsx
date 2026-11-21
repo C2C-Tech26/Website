@@ -96,7 +96,7 @@ export function TrainingCourseList() {
             const Icon = course.icon;
             const isExpanded = !!expandedCourses[course.id];
             const curriculum = getCurriculumById(course.name);
-            const duration = course.category === 'Full Stack Courses' ? '4-6 Months' : course.category === 'Advanced IT Courses' ? '3-4 Months' : course.category === 'Basic Courses' ? '2-3 Months' : '1 Month';
+            const duration = course.category === 'Full Stack Courses' ? '4-6 Months' : (course.category === 'Advanced IT Courses' || course.category === 'Core Courses') ? '3-4 Months' : course.category === 'Basic Courses' ? '2-3 Months' : '1 Month';
             const keyTopics = curriculum?.modules.slice(0, 4).map((m) => m.title.replace(/^MODULE \d+ - /i, '').replace(/^\d+ /i, '').replace(/^PHASE \d+ - /i, '')) || [];
 
             return (
