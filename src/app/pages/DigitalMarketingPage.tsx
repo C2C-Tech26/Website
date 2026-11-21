@@ -171,68 +171,6 @@ export function DigitalMarketingPage() {
   return (
     <div className="pt-20 min-h-screen bg-gray-50">
       
-      {/* Client Logos Scrolling Marquee - Directly Below the Header */}
-      <section className="bg-[var(--navy)] border-b border-white/10 py-3.5 md:py-4.5 overflow-hidden relative shadow-md">
-        <div className="max-w-[1440px] mx-auto px-6 mb-2.5 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <span className="flex h-2.5 w-2.5 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
-            </span>
-            <span
-              className="text-xs md:text-sm font-bold uppercase tracking-wider text-[var(--yellow)] flex items-center gap-1.5"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              Our Digital Marketing Clients
-            </span>
-            <span className="hidden sm:inline-block text-xs text-blue-200/70 font-medium">
-              | Brands Scaled by C2C Tech Solutions
-            </span>
-          </div>
-          <span className="text-[11px] font-semibold text-blue-200/60 uppercase tracking-wider hidden md:inline-block">
-            Continuous Campaign Performance
-          </span>
-        </div>
-
-        {/* Scrolling Track with Edge Gradient Masks */}
-        <div className="relative w-full overflow-hidden">
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-r from-[var(--navy)] via-[var(--navy)]/80 to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-[var(--navy)] via-[var(--navy)]/80 to-transparent z-10" />
-
-          <div className="animate-marquee-scroll flex gap-4 md:gap-6 items-center py-1">
-            {[...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS].map((client, idx) => (
-              <div
-                key={`${client.id}-${idx}`}
-                className="flex items-center gap-3.5 bg-[#14233c] hover:bg-[#1d3153] border border-white/15 hover:border-[var(--yellow)] rounded-2xl px-4 py-2.5 shadow-sm transition-all duration-300 shrink-0 group cursor-default"
-              >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center p-1 shrink-0 shadow-2xs">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                    loading="eager"
-                  />
-                </div>
-                <div className="pr-2 text-left">
-                  <p
-                    className="text-xs md:text-sm font-bold text-white whitespace-nowrap leading-tight group-hover:text-[var(--yellow)] transition-colors"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    {client.name}
-                  </p>
-                  <p
-                    className="text-[10px] md:text-xs text-blue-200/80 font-medium whitespace-nowrap leading-tight mt-0.5"
-                    style={{ fontFamily: 'var(--font-body)' }}
-                  >
-                    {client.tagline}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section className="relative py-20 px-6 md:px-12 lg:px-24 bg-[var(--navy)] overflow-hidden">
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[100px]"></div>
@@ -310,6 +248,68 @@ export function DigitalMarketingPage() {
             </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* Client Logos Scrolling Marquee - Above Partnership Plans */}
+      <section className="bg-[var(--navy)] py-6 md:py-8 overflow-hidden relative shadow-md">
+        <div className="max-w-[1440px] mx-auto px-6 mb-3 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-2.5 w-2.5 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+            </span>
+            <span
+              className="text-xs md:text-sm font-bold uppercase tracking-wider text-[var(--yellow)] flex items-center gap-1.5"
+              style={{ fontFamily: 'var(--font-heading)' }}
+            >
+              Our Digital Marketing Clients
+            </span>
+            <span className="hidden sm:inline-block text-xs text-blue-200/70 font-medium">
+              | Brands Scaled by C2C Tech Solutions
+            </span>
+          </div>
+          <span className="text-[11px] font-semibold text-blue-200/60 uppercase tracking-wider hidden md:inline-block">
+            Continuous Campaign Performance
+          </span>
+        </div>
+
+        {/* Scrolling Track with Edge Gradient Masks */}
+        <div className="relative w-full overflow-hidden">
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-r from-[var(--navy)] via-[var(--navy)]/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-[var(--navy)] via-[var(--navy)]/80 to-transparent z-10" />
+
+          <div className="animate-marquee-scroll flex gap-4 md:gap-6 items-center py-1">
+            {[...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS, ...DIGITAL_MARKETING_CLIENTS].map((client, idx) => (
+              <div
+                key={`${client.id}-${idx}`}
+                className="flex items-center gap-3.5 bg-[#14233c] hover:bg-[#1d3153] border border-white/15 hover:border-[var(--yellow)] rounded-2xl px-4 py-2.5 shadow-sm transition-all duration-300 shrink-0 group cursor-default"
+              >
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center p-1 shrink-0 shadow-2xs">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    loading="eager"
+                  />
+                </div>
+                <div className="pr-2 text-left">
+                  <p
+                    className="text-xs md:text-sm font-bold text-white whitespace-nowrap leading-tight group-hover:text-[var(--yellow)] transition-colors"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                  >
+                    {client.name}
+                  </p>
+                  <p
+                    className="text-[10px] md:text-xs text-blue-200/80 font-medium whitespace-nowrap leading-tight mt-0.5"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                  >
+                    {client.tagline}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
