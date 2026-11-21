@@ -10,6 +10,7 @@ const navLinks = [
   { to: '/training', label: 'Explore Courses' },
   { to: '/digital-marketing', label: 'Digital Marketing' },
   { to: '/contact', label: 'Contact' },
+  { to: '/admin/enquiries', label: 'Admin' },
 ];
 
 export function Navbar() {

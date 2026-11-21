@@ -156,6 +156,9 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         message: formData.message.trim(),
       });
 
+      // Automatically download syllabus PDF for the course
+      generateAndDownloadCurriculumPdf(courseName);
+
       setIsSubmitting(false);
       setIsSuccess(true);
     }, 1500);
@@ -186,7 +189,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
           animation: 'modalScaleIn 0.3s ease-out forwards',
         }}
       >
-        <style jsx>{`
+        <style>{`
           @keyframes modalScaleIn {
             from {
               opacity: 0;
@@ -250,7 +253,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   }}
                 >
                   <Download size={18} />
-                  Download Curriculum
+                  Download Syllabus
                 </button>
                 <a
                   href={getWhatsAppUrl({

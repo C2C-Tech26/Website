@@ -10,6 +10,7 @@ import { ContactPage } from './pages/ContactPage';
 import { ExploreCoursesPage } from './pages/ExploreCoursesPage';
 import { DigitalMarketingPage } from './pages/DigitalMarketingPage';
 import { CurriculumPage } from './pages/CurriculumPage';
+import { AdminEnquiriesPage } from './pages/AdminEnquiriesPage';
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ export const router = createBrowserRouter([
       { path: 'digital-marketing', Component: DigitalMarketingPage },
       { path: 'contact', Component: ContactPage },
       { path: 'course/:courseId', Component: CurriculumPage },
+      { path: 'admin/enquiries', Component: AdminEnquiriesPage },
     ],
   },
 ]);
